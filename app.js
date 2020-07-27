@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const path = require('path');
 const User = require("./user");
 
-mongoose.connect("mongodb://localhost:27017/registrations", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URL ||'mongodb://localhost:27017/mongo-3', { useNewUrlParser: true });
 
 const app = express();
 app.set('view engine', 'pug');
