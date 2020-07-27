@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  form(method='POST' action='/register')
+    div
+      label(for='name') Name:
+      input#name.form-control(type='text', placeholder='first and last' name='name')
+    div
+      label(for='email') Email:
+      input#email.form-control(type='email', placeholder='name@email.com' name='email')
+    div
+      label(for='password') Contraseña:
+      input#password.form-control(type='password', placeholder='Contraseña' name='password')
+    button(type='submit') Registrar
